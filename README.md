@@ -1,18 +1,72 @@
-## Getting Started
+# Listas Enlazadas en Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este proyecto es una implementación de listas enlazadas en Java, que incluye:
 
-## Folder Structure
+- Listas enlazadas sencillas sin cola (`SencillaSinCola`)
+- Listas enlazadas sencillas con cola (`SencillaConCola`)
+- Listas doblemente enlazadas con cola (`DobleConCola`)
 
-The workspace contains two folders by default, where:
+## Descripción
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+El proyecto utiliza interfaces y genéricos para proporcionar una implementación flexible y reutilizable de listas enlazadas. Cada tipo de lista enlazada tiene sus propias características y métodos específicos.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### Listas Enlazadas Sencillas Sin Cola (`SencillaSinCola`)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Esta implementación de lista enlazada no mantiene una referencia al último nodo (cola). Los métodos principales incluyen:
 
-## Dependency Management
+- `pushFront(T valor)`: Inserta un nodo al inicio de la lista.
+- `pushBack(T valor)`: Inserta un nodo al final de la lista.
+- `popFront()`: Elimina el nodo al inicio de la lista.
+- `popBack()`: Elimina el nodo al final de la lista.
+- `find(T valor)`: Encuentra un nodo con el valor especificado.
+- `erase(T valor)`: Elimina un nodo con el valor especificado.
+- `addBefore(INodo<T> nodo, T valor)`: Inserta un nodo antes de un nodo específico.
+- `addAfter(INodo<T> nodo, T valor)`: Inserta un nodo después de un nodo específico.
+- `empty()`: Verifica si la lista está vacía.
+- `topFront()`: Obtiene el valor del primer nodo.
+- `topBack()`: Obtiene el valor del último nodo.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Listas Enlazadas Sencillas Con Cola (`SencillaConCola`)
+
+Esta implementación de lista enlazada mantiene una referencia tanto al primer nodo (cabeza) como al último nodo (cola). Los métodos principales incluyen:
+
+- `pushFront(T valor)`: Inserta un nodo al inicio de la lista.
+- `pushBack(T valor)`: Inserta un nodo al final de la lista.
+- `popFront()`: Elimina el nodo al inicio de la lista.
+- `popBack()`: Elimina el nodo al final de la lista.
+- `find(T valor)`: Encuentra un nodo con el valor especificado.
+- `erase(T valor)`: Elimina un nodo con el valor especificado.
+- `addBefore(INodo<T> nodo, T valor)`: Inserta un nodo antes de un nodo específico.
+- `addAfter(INodo<T> nodo, T valor)`: Inserta un nodo después de un nodo específico.
+- `empty()`: Verifica si la lista está vacía.
+- `topFront()`: Obtiene el valor del primer nodo.
+- `topBack()`: Obtiene el valor del último nodo.
+
+### Listas Doblemente Enlazadas Con Cola (`DobleConCola`)
+
+Esta implementación de lista enlazada mantiene una referencia tanto al primer nodo (cabeza) como al último nodo (cola), y cada nodo tiene referencias a su nodo anterior y siguiente. Los métodos principales incluyen:
+
+- `pushFront(T valor)`: Inserta un nodo al inicio de la lista.
+- `pushBack(T valor)`: Inserta un nodo al final de la lista.
+- `popFront()`: Elimina el nodo al inicio de la lista.
+- `popBack()`: Elimina el nodo al final de la lista.
+- `find(T valor)`: Encuentra un nodo con el valor especificado.
+- `erase(T valor)`: Elimina un nodo con el valor especificado.
+- `addBefore(INodo<T> nodo, T valor)`: Inserta un nodo antes de un nodo específico.
+- `addAfter(INodo<T> nodo, T valor)`: Inserta un nodo después de un nodo específico.
+- `empty()`: Verifica si la lista está vacía.
+- `topFront()`: Obtiene el valor del primer nodo.
+- `topBack()`: Obtiene el valor del último nodo.
+
+## Ejecución
+
+Para ejecutar el proyecto, asegúrate de tener instalado Java en tu sistema. Compila y ejecuta la clase `App.java` para ver ejemplos de uso y pruebas de rendimiento de las diferentes implementaciones de listas enlazadas.
+
+```sh
+javac src/App.java
+java src/App
+```
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si encuentras algún problema o tienes alguna sugerencia, por favor abre un issue o envía un pull request.
